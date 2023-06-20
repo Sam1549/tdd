@@ -12,4 +12,13 @@ public class PhoneBookTest {
 
         Assertions.assertEquals(expected,actual);
     }
+
+    @Test
+    void findByNumberTest(){
+        String expected = "Sam";
+
+        String actual = phoneBook.findByNumber();
+
+        Assertions.assertEquals(expected,actual);
+    }
 }
