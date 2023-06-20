@@ -16,8 +16,9 @@ public class PhoneBookTest {
     @Test
     void findByNumberTest(){
         String expected = "Sam";
+        phoneBook.add("Sam","822");
 
-        String actual = phoneBook.findByNumber();
+        String actual = phoneBook.findByNumber("822");
 
         Assertions.assertEquals(expected,actual);
     }

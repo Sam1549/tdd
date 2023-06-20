@@ -1,6 +1,8 @@
 package org.example;
 
+import java.security.KeyStore;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.TreeMap;
 
 public class PhoneBook {
@@ -10,8 +12,14 @@ public class PhoneBook {
         phoneBook.put(name,number);
         return phoneBook.size();
     }
-    public  String findByNumber(){
-        return null;
+    public  String findByNumber(String number){
+        for (Map.Entry entry : phoneBook.entrySet()){
+            if(entry.getValue().equals(number)){
+            return entry.getKey().toString();
+            }
+        }
+
+        return "Нет контакта";
     }
 
 
