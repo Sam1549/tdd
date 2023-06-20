@@ -8,7 +8,7 @@ public class PhoneBookTest {
     void addTest(){
         final int expected = 1;
 
-        final int actual = phoneBook.add();
+        final int actual = phoneBook.add("Sam","822");
 
         Assertions.assertEquals(expected,actual);
     }
