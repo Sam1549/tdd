@@ -4,6 +4,7 @@ import java.security.KeyStore;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.stream.Collectors;
 
 public class PhoneBook {
 
@@ -31,6 +32,18 @@ public class PhoneBook {
             }
         }
         return "Нет контакта";
+    }
+
+    public Map<String, String> printAllNames() {
+        Map<String, String> treeMap = phoneBook.entrySet()
+                .stream()
+                .collect(Collectors.toMap(Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (oldValue, newValue) -> newValue,
+                        TreeMap::new));
+        treeMap.entrySet().forEach(System.out::println);
+
+        return treeMap;
     }
 
 
