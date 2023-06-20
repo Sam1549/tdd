@@ -22,4 +22,13 @@ public class PhoneBookTest {
 
         Assertions.assertEquals(expected,actual);
     }
+
+    @Test
+    void findByNameTest(){
+        String expected = "822";
+
+        String actual = phoneBook.findByName();
+
+        Assertions.assertEquals(expected,actual);
+    }
 }

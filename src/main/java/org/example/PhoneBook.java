@@ -22,5 +22,9 @@ public class PhoneBook {
         return "Нет контакта";
     }
 
+    public String findByName(){
+        return null;
+    }
+
 
 }
